@@ -1,37 +1,41 @@
+import java.io.IOException;
+import java.io.PrintWriter;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author Atharva
- */
+
 public class LoginServlet extends HttpServlet {
 
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse res)
-            throws ServletException, IOException {
-        res.setContentType("text/html");
-        PrintWriter out = res.getWriter();
-        String uname = req.getParameter("email");
-        String password = req.getParameter("password");
-        boolean status = VerifyLogin.checkLogin(uname,password);
-        if(status==true){
-            HttpSession session = req.getSession();
-            session.setAttribute("username", uname);
-            out.print("Welcome" + uname);
-            RequestDispatcher rd = req.getRequestDispatcher("home.jsp");
-            rd.include(req, res);
-        } else {
-            String Error = "Please check your Email and Password";
-            req.setAttribute(Error, Error);
-            RequestDispatcher rd=req.getRequestDispatcher("index.jsp");
-			rd.include(req, res);
-            }
-        out.close();
-        }
-    }
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String uname=request.getParameter("email");
+		String password=request.getParameter("password");
+		boolean status=VerifyLogin.checkLogin(uname,password);
+		if(status==true){
+			HttpSession session=request.getSession();
+			session.setAttribute("username",uname);
+			out.print("Welcome    " + uname);
+			RequestDispatcher rd=request.getRequestDispatcher("home.jsp");
+			rd.include(request, response);
+		}
+		else{
+			String Error="Please check your EMail and Password";
+			request.setAttribute("Error", Error);
+			
+			RequestDispatcher rd=request.getRequestDispatcher("index.jsp");
+			rd.include(request, response);
+			
+		}
+		out.close();
+	}
 
-
+}

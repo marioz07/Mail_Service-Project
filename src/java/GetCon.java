@@ -1,20 +1,24 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-public class GetCon{
+public class GetCon {
 private GetCon(){}
+
 public static Connection con;
 static{
-        try{
-            Class.forName(DBIntializer.DRIVER);
-            con = DriverManager.getConnection(DBIntializer.CON_STRING,DBIntializer.USERNAME, DBIntializer.PASSWORD);
-        } catch (ClassNotFoundException e){
-            e.printStackTrace();
-        } catch (SQLException e){
-            System.out.println("Exception in getcon");
-        }
-    }
-    public static Connection getCon(){
-        return con;
-    }
+	try {
+		Class.forName(DBIntializer.DRIVER);
+		con=DriverManager.getConnection(DBIntializer.CON_STRING,DBIntializer.USERNAME,DBIntializer.PASSWORD);
+	} catch (ClassNotFoundException e) {
+		System.out.println("Exception in GetCon"+ e);
+		e.printStackTrace();
+	} catch (SQLException e) {
+	
+		System.out.println("Exception in GetCon"+ e);
+	}
+	
+}
+public static Connection getCon(){
+	return con;
+}
 }

@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
-<%@page import="java.util.Map.Entry"%>
+
 
 <html>
 	<head>
 		<title>Mail Services</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<script src="css/5grid/viewport.js"></script><link rel="stylesheet" href="css/5grid/core.css" />
-		<link rel="stylesheet" href="css/style.cs" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--5grid--><script src="css/5grid/viewport.js"></script><!--[if lt IE 9]><script src="css/5grid/ie.js"></script><![endif]--><link rel="stylesheet" href="css/5grid/core.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!--[if IE 9]><link rel="stylesheet" href="css/style-ie9.css" /><![endif]-->
 	</head>
 	<body>
 	<!-- ********************************************************* -->
@@ -30,7 +33,7 @@
 						
 						<section>
 							<h2>Welcome to Mailservices!</h2>
-							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="http://www.javatpoint.com/">javatpoint</a><br> for <a href="http://www.cstpoint.com/">Mailing system</a>.
+							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="/">Atharva</a><br> for <a href="/">Mailing system</a>.
 							You can perform all email operation,Currently  it stores the information in database
 							it's free of cost.Let's try it..
 							</p>
@@ -111,6 +114,7 @@
 		
 	<div id="footer">	
 					
+		<br>
 				
 </div>
 	

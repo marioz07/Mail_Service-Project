@@ -1,32 +1,44 @@
-import javax.servlet.*;
-import javax.servlet.http.*;
-import java.io.*;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-public class RegisterServlet extends HttpServlet{
-    
-    public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-        res.setContentType("text/Html");
-        PrintWriter out =res.getWriter();
-        String email= req.getParameter("email");
-	String password= req.getParameter("password");
-	String name= req.getParameter("name");
-	String gender= req.getParameter("gender");
-        
-        String num=req.getParameter("mname");    
-        double mname = Double.parseDouble(num);
-        String country=req.getParameter("country");
-        int status = RegisterUser.register(email, password, name, gender, mname,country);
-        if(status>0){
-            String register ="You are Successfully registered";
-            req.setAttribute("register",register);
-            RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
-            rd.include(req, res);
-        } else {
-            String registererror="Sorry,Registration failed. please try later";
-			req.setAttribute("registererror",registererror);
-			RequestDispatcher rd=req.getRequestDispatcher("Register.jsp");
-			rd.include(req, res);
-        }
-        
-    }
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class RegisterServlet extends HttpServlet {
+
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		response.setContentType("text/html");
+		PrintWriter out=response.getWriter();
+		String email=request.getParameter("email");
+		String password=request.getParameter("password");
+		String name=request.getParameter("name");
+		String gender=request.getParameter("gender");
+		
+		String num=request.getParameter("mname");
+		double mname=Double.parseDouble(num);
+		String country=request.getParameter("country");
+		
+		int status=RegisterUser.register(email, password, name, gender, mname,country);
+		if(status>0){
+			String register= "You are Successfully registered";
+			request.setAttribute("register",register);
+			RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
+			rd.include(request, response);
+		}
+		else{
+			String registererror="Sorry,Registration failed. please try later";
+			request.setAttribute("registererror",registererror);
+			RequestDispatcher rd=request.getRequestDispatcher("Register.jsp");
+			rd.include(request, response);
+		}
+	out.close();	
+	}
+
 }

@@ -85,7 +85,14 @@
 					<div class="4u">
 					
 						<section>
-							
+							<h2>How about some links?</h2>
+							<div class="6u-first">
+								<ul class="link-list">
+									<li><a href="http://www.javatpoint.com">Java tutorial and more projects</a></li>
+									<li><a href="http://www.cstpoint.com">Learn C,C++,Php,Html and much more free of cost </a></li>
+								
+								</ul>
+							</div>
 							
 						</section>
 
@@ -97,7 +104,15 @@
 			</body>
 		
 	<div id="footer">	
-					
+					<div id="copyright">
+					<br>	<h4>For more information Click here<a href="http://www.javatpoint.com"> javatpoint</a><br>
+						Something of interest
+						If you are interested in doing more projects and want to learn much more 
+							Kindly have a look of my website clicking the following link..</h4>
+				
+						<h5>&copy; Copyright 2012,All Rights reserved..Designed by <a href="http://javatpoint.com/">javatpoint</a> + <a href="http://www.cstpoint.com/">Cstpoint</a>.</h5>
+		
+					</div>
 		<br>
 				
 </div>

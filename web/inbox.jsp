@@ -42,7 +42,7 @@ document.getElementById('bottom').innerHTML=val;
 						
 						&gt;<section>
 							<h2>Welcome to Mailservices!</h2>
-							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="http://www.javatpoint.com/">javatpoint</a><br> for <a href="http://www.cstpoint.com/">Mailing system</a>.
+							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="/">Atharva</a><br> for <a href="/">Mailing system</a>.
 							You can perform all email operation,Currently  it stores the information in database
 							it's free of cost.Let's try it..
 							</p>
@@ -73,7 +73,7 @@ document.getElementById('bottom').innerHTML=val;
 			out.print("<tr><td>SENDER</td><th>MESSAGE</td><td>DATE OF RECIEVING</td><td>Delete</td></tr>");
 			while(rs.next()){
 				int id=rs.getInt(1);
-				System.out.print(id);
+				out.print(id);
 				out.print("<tr>");
 				out.print("<td>" + rs.getString(3) + "</td>");
 				out.print("<td>" + rs.getString(4) + "</td>");

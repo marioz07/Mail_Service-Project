@@ -6,7 +6,7 @@
 						
 						<section>
 							<h2>Welcome to Mailservices!</h2>
-							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="http://www.javatpoint.com/">javatpoint</a><br> for <a href="http://www.cstpoint.com/">Mailing system</a>.
+							<p>Hi! This is <strong>Mail Services</strong>, a free service by <a href="/">Atharva</a><br> for <a href="/">Mailing system</a>.
 							You can perform all email operation,Currently  it stores the information in database
 							it's free of cost.Let's try it..
 							</p>
@@ -71,17 +71,7 @@
 					</div>
 					<div class="4u">
 					
-						<section>
-							<h2>How about some links?</h2>
-							<div class="6u-first">
-								<ul class="link-list">
-									<li><a href="http://www.javatpoint.com">Java tutorial and more projects</a></li>
-									<li><a href="http://www.cstpoint.com">Learn C,C++,Php,Html and much more free of cost </a></li>
-								
-								</ul>
-							</div>
-							
-						</section>
+						
 
 					</div>
 				</div>
